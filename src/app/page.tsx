@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { caller } from "@/trpc/server";
 
-const page = ()=>{
+const page = async()=>{
+  const users = await caller.getusers();
   return (
     <div className="min-h-screen min-w-screen flex items-center justify-center">
-      <Button variant="default">
-        Click me!
-      </Button>
+     {JSON.stringify(users)}
     </div>
   );
 }
