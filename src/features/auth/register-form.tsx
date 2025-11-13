@@ -74,8 +74,8 @@ export function RegisterForm(){
     const isPending = form.formState.isSubmitting;
 
     return (
-        <div className="flex flex-col gap-6 ">
-         <Card>
+        <div className="flex flex-col">
+         <Card className="p-6">
             <CardHeader className="text-center">
                 <CardTitle className="text-2xl font-bold">Get Started</CardTitle>
                 <CardDescription>
@@ -84,7 +84,7 @@ export function RegisterForm(){
             </CardHeader>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
-                    <div className="grid gap-6">
+                    <div className="grid gap-4">
                         <div className="flex flex-col gap-4">
                             <Button
                                 variant={"outline"}
@@ -92,6 +92,7 @@ export function RegisterForm(){
                                 type="button"
                                 disabled={isPending}
                             >   
+                                 <Image src="/github.svg" alt="github logo" width={20} height={20}/> 
                                 Continue with Github
                             </Button>
                             <Button
@@ -99,7 +100,8 @@ export function RegisterForm(){
                                 className="w-full"
                                 type="button"
                                 disabled={isPending}
-                            >   
+                            >  
+                                 <Image src="/google.svg" alt="google logo" width={20} height={20}/>  
                                 Continue with Google
                             </Button>
                         </div>
