@@ -64,8 +64,8 @@ export function LoginForm(){
     const isPending = form.formState.isSubmitting;
 
     return (
-        <div className="flex flex-col gap-6 ">
-         <Card>
+        <div className="flex flex-col gap-6">
+         <Card className="p-6">
             <CardHeader className="text-center">
                 <CardTitle className="text-2xl font-bold">Welcome Back</CardTitle>
                 <CardDescription>
@@ -81,7 +81,8 @@ export function LoginForm(){
                                 className="w-full"
                                 type="button"
                                 disabled={isPending}
-                            >   
+                            >  
+                                <Image src="/github.svg" alt="github logo" width={20} height={20}/> 
                                 Continue with Github
                             </Button>
                             <Button
@@ -89,7 +90,8 @@ export function LoginForm(){
                                 className="w-full"
                                 type="button"
                                 disabled={isPending}
-                            >   
+                            >       
+                                <Image src="/google.svg" alt="google logo" width={20} height={20}/>
                                 Continue with Google
                             </Button>
                         </div>
